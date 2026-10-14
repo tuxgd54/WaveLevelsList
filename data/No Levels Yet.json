@@ -3,7 +3,7 @@
     "name": "No Levels Yet",
     "author": "LevelUploader",
     "creators": ["Creator1", "Creator2", "Creator3"],
-    "verifier": "Verifier",
+    "verifier": "#",
     "verification": "#",
     "percentToQualify": 56,
     "password": "Not Copyable",
