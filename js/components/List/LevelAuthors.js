@@ -8,15 +8,15 @@ export default {
             type: Array,
             required: true,
         },
-        verifier: {
+        botter: {
             type: String,
             required: true,
         },
     },
     template: `
         <div class="level-authors">
-            <template v-if="selfVerified">
-                <div class="type-title-sm">Creator & Verifier</div>
+            <template v-if="selfBotted">
+                <div class="type-title-sm">Creator & Botter</div>
                 <p class="type-body">
                     <span>{{ author }}</span>
                 </p>
@@ -35,9 +35,9 @@ export default {
                         ><span v-if="index < creators.length - 1">, </span>
                     </template>
                 </p>
-                <div class="type-title-sm">Verifier</div>
+                <div class="type-title-sm">Botter</div>
                 <p class="type-body">
-                    <span>{{ verifier }}</span>
+                    <span>{{ botter }}</span>
                 </p>
             </template>
             <div class="type-title-sm">Publisher</div>
@@ -49,7 +49,7 @@ export default {
 
     computed: {
         selfVerified() {
-            return this.author === this.verifier && this.creators.length === 0;
+            return this.author === this.botter && this.creators.length === 0;
         },
     },
 };
